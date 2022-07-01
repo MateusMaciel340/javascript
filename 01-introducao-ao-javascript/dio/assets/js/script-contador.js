@@ -1,12 +1,11 @@
-var currentNumberWrapper = document.getElementById("currentNumber");
-var currentNumber = 0;
+let currentNumber = document.getElementById("currentNumber");
 
-function increment(){
-    currentNumber = currentNumber + 1;
-    currentNumberWrapper.innerHTML = currentNumber;
-}
+document.querySelector("#counter #subtrair").addEventListener("click", function(){
+    let number = parseInt(currentNumber.textContent) - 1;
+    currentNumber.textContent = number;
+});
 
-function decrement(){
-    currentNumber = currentNumber - 1;
-    currentNumberWrapper.innerHTML = currentNumber;
-}
+document.querySelector("#counter #adicionar").addEventListener("click", function(){
+    let number = parseInt(currentNumber.textContent) + 1;
+    currentNumber.textContent = number;
+});
