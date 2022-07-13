@@ -1,15 +1,14 @@
-let botao = document.getElementById("botao");
-let valor1 = document.getElementById("valor1");
-let valor2 = document.getElementById("valor2");
-
-function somarNumeros(numero1, numero2){
-    if(typeof numero1 == "number" && typeof numero2 == "number"){
-        return numero1 + numero2;
-    }else{
-        return Number(numero1) + Number(numero2);
-    }
+"use strict";
+var botao = document.getElementById("botao");
+var valor1 = document.getElementById("valor1");
+var valor2 = document.getElementById("valor2");
+function adicionarNumeros(numero1, numero2) {
+    return numero1 + numero2;
 }
-
-botao.addEventListener("click", () => {
-    console.log(somarNumeros(valor1.value, valor2.value));
-});
+if (botao) {
+    botao.addEventListener("click", function () {
+        if (valor1 && valor2) {
+            console.log(adicionarNumeros(Number(valor1.value), Number(valor2.value)));
+        }
+    });
+}
