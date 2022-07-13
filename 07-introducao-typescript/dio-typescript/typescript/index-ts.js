@@ -1,5 +1,6 @@
+"use strict";
 // #01.11 - Como importar bibliotecas com typescript
-
+exports.__esModule = true;
 /*import $ from "jquery";
 
 $.fn.extend({
@@ -9,5 +10,4 @@ $.fn.extend({
 });
 
 $("body").novaFuncao();*/
-
-export const numero = 2;
+exports.numero = 2;
