@@ -1,7 +1,10 @@
-// 01.6 - Tratando a tag input
+// 01.7 - O que são Generic Types
 
-const input = document.getElementById("input") as HTMLInputElement;
-input.addEventListener("input", (event) => {
-    const i = event.currentTarget as HTMLInputElement;
-    console.log(i.value);
-})
+// T -> normal
+// any -> sem tipo por enquanto
+
+function adicionaApendiceList<T>(array: any[], valor: T){
+    return array.map(() => valor);
+}
+
+adicionaApendiceList([1, 2, 3], "d");
