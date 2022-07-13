@@ -1,15 +1,24 @@
-// #01.9 - Utilizando o caracter "?" para variáveis opcionais
+// #01.10 - Criando variáveis com propriedade readonly e private
 
-interface IUsuario{
-    id: string,
-    email: string,
-    cargo?: "gerente" | "coordenador" | "supervisor" | "funcionario"
+interface Cachorro{
+    nome: string,
+    idade: number,
+    parqueFavorito?: string;
 }
 
-function redirecione(usuario: IUsuario){
-    if(usuario.cargo){
-        // redicionar(usuario.cargo);
+type CachorroSomenteLeitura = {
+    +readonly [K in keyof Cachorro]-?: Cachorro[K];
+}
+
+class meuCachorro implements CachorroSomenteLeitura{
+    idade;
+    nome;
+    parqueFavorito;
+
+    constructor(nome, idade){
+        this.nome = nome;
+        this.idade = idade;
     }
-
-    // redirecionar para a área do usuário
 }
+
+const cao = new meuCachorro("Apolo", 14);
