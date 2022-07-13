@@ -1,10 +1,18 @@
-// 01.7 - O que são Generic Types
+// #01.8 - Desenvolvendo condicionais a partir de parâmetros
 
-// T -> normal
-// any -> sem tipo por enquanto
-
-function adicionaApendiceList<T>(array: any[], valor: T){
-    return array.map(() => valor);
+interface IUsuario{
+    id: string,
+    email: string;
 }
 
-adicionaApendiceList([1, 2, 3], "d");
+interface IAdmin{
+    cargo: "gerente" | "coordenador" | "supervisor"
+}
+
+function redirecione(usuario: IUsuario | IAdmin){
+    if("cargo" in usuario){
+        // redirecionar para a área de administração
+    }
+
+    // redirecionar para a área do usuário
+}
