@@ -1,17 +1,14 @@
-// #01.8 - Desenvolvendo condicionais a partir de parâmetros
+// #01.9 - Utilizando o caracter "?" para variáveis opcionais
 
 interface IUsuario{
     id: string,
-    email: string;
+    email: string,
+    cargo?: "gerente" | "coordenador" | "supervisor" | "funcionario"
 }
 
-interface IAdmin{
-    cargo: "gerente" | "coordenador" | "supervisor"
-}
-
-function redirecione(usuario: IUsuario | IAdmin){
-    if("cargo" in usuario){
-        // redirecionar para a área de administração
+function redirecione(usuario: IUsuario){
+    if(usuario.cargo){
+        // redicionar(usuario.cargo);
     }
 
     // redirecionar para a área do usuário
