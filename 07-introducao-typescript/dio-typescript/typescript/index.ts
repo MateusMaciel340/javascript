@@ -1,6 +1,24 @@
-function soma(a: number, b: number){
-    return a + b;
+// #01.5 - Como funcionam os types
+
+interface IAnimal{
+    nome: string, 
+    tipo: "terrestre" | "aquático";
+    domestico: boolean
 }
 
-console.log(soma(1, 2));
-//console.log(soma("a", "b")); erro!
+interface IFelino extends IAnimal{
+    visaoNoturna: boolean;
+}
+
+interface ICanino extends IAnimal{
+    porte: "pequeno" | "médio" | "grande"
+}
+
+type IDomestico = IFelino | ICanino;
+
+const animal: IDomestico = {
+    domestico: true,
+    nome: "Cachorro",
+    porte: "médio",
+    tipo: "terrestre",
+}
