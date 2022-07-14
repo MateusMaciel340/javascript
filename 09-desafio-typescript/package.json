@@ -1,0 +1,18 @@
+{
+  "name": "09-desafio-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.0.4",
+    "dotenv": "^16.0.1",
+    "typescript": "^4.7.4"
+  }
+}
