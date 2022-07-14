@@ -5,7 +5,7 @@ var valor2 = document.getElementById("valor2");
 function adicionarNumeros(numero1, numero2, devePrintar, frase) {
     var resultado = numero1 + numero2;
     if (devePrintar) {
-        console.log(frase + resultado);
+        console.log(numero1 + numero2);
     }
     return numero1 + numero2;
 }
